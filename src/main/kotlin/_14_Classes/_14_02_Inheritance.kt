@@ -12,8 +12,7 @@ class Derived(p: Int) : Base(p) {
     override fun v() {}
 }
 
-class Derived2 : ArrayList<String>() {
-
+class DerivedFromJava : ArrayList<String>() {
     override fun trimToSize() {
     }
 }

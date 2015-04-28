@@ -6,10 +6,12 @@ public class Address {
     public var name: String = "Madafak";
     public var street: String = "5th"
     public var city: String = "Los Angeles"
-    public val state: String? = "California"
+
+    public val state: String = "California"
     public val zip: String = "44-555"
     var initialized = 1
-    //public val ready = 1
+//    public val ready = 1
+
     var stringRepresentation: String
         get() = this.toString()
         set(value) {

@@ -4,8 +4,16 @@ abstract class A {
     abstract fun f()
 }
 
+class AB() : A() {
+    override fun f() {
+        throw UnsupportedOperationException()
+    }
+}
+
 trait B {
-    open fun f() { print("B") }
+    fun f() {
+        print("B")
+    }
 }
 
 class C() : A(), B {

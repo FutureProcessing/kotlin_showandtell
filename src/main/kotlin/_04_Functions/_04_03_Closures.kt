@@ -3,7 +3,6 @@ package _04_Functions
 import java.util.HashSet
 import kotlin.properties.Delegates
 
-
 fun dfs(graph: Graph) {
     val visited = HashSet<Vertex>()
     fun dfs(current: Vertex) {

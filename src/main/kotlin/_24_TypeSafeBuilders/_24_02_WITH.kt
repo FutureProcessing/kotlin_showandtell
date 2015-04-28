@@ -2,7 +2,6 @@ package _24_TypeSafeBuilders
 
 import java.util.HashMap
 
-
 public inline fun <T, R> with(receiver: T, f: T.() -> R): R = receiver.f()
 
 fun useOnMap() {

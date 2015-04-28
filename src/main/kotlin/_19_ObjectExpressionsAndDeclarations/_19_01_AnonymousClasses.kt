@@ -1,6 +1,6 @@
 package _19_ObjectExpressionsAndDeclarations
 
-fun anonymousClass{
+fun anonymousClass() {
     Window().addMouseListener(object : MouseAdapter() {
         override fun mouseClicked(e: MouseEvent) {
             // ...

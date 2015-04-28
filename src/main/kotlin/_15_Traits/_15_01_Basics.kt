@@ -1,39 +1,46 @@
 package _15_Traits
 
-trait MyTrait {
-    fun bar()
-    fun foo() {
-        // optional body
+
+class optionalBody {
+    trait TraitWithOptionalBody {
+        fun bar()
+        fun foo() {
+            // optional body
+        }
+    }
+
+    class Child : TraitWithOptionalBody {
+        override fun bar() {
+            // body
+        }
     }
 }
 
-class Child : MyTrait {
-    override fun bar() {
-        // body
+class abstractProperty {
+    trait TraitWithAbstractProperty {
+        val property: Int // abstract, can't initialize
+
+        fun foo() {
+            print(property)
+        }
+    }
+
+    class Child2 : TraitWithAbstractProperty {
+        override val property: Int = 29
     }
 }
 
-trait MyTrait2 {
-    val property: Int // abstract
-
-    fun foo() {
-        print(property)
+class mindFuck() {
+    open class A(x: Int) {
+        val y = x * 2
     }
-}
 
-class Child2: MyTrait2 {
-    override val property: Int = 29
-}
-// snip 3
-open class A(x: Int) {
-    val y = x * 2
-}
-
-trait B : A {
-    fun foo() {
-        print(y)
+    trait B : A {
+        fun foo() {
+            print(y)
+        }
     }
+
+    class C() : A(239), B {}
+
 }
-
-class C() : A(239), B {}
-

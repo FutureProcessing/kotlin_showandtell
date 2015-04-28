@@ -1,13 +1,12 @@
 package _22_Nullability
 
-
 /*
 
 Kotlin’s type system is aimed to eliminate NullPointerException’s from our code. The only possible causes of NPE’s may be
 
-An explicit call to throw NullPointerException()
-External Java code has caused it
-There’s some data inconsistency with regard to initialization (an uninitialized this available in a constructor is used somewhere)
+- An explicit call to throw NullPointerException()
+- External Java code has caused it
+- There’s some data inconsistency with regard to initialization (an uninitialized this available in a constructor is used somewhere)
 
 Nullability is embedded into language, not using heap, eliminates NPE
 
@@ -52,7 +51,7 @@ fun theElvis() {
     val l2 = word?.length() ?: -1
 }
 
-fun foo(node: Node): String? {
+fun theElvisStillHereAsExpression(node: Node): String? {
     val parent = node.getParent() ?: return null
     val name = node.getName() ?: throw IllegalArgumentException("name expected")
     return null
@@ -63,7 +62,7 @@ fun ifYouWantNPEYouCanHaveIt() {
     word!!.length()
 }
 
-
+// Helper classes, not relevant
 class Node {
     fun getParent(): Node = Node()
 

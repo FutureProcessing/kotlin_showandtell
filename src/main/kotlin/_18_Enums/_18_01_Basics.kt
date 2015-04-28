@@ -17,4 +17,3 @@ enum class ProtocolState {
 
     abstract fun signal(): ProtocolState
 }
-

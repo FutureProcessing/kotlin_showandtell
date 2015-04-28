@@ -4,7 +4,7 @@ trait MovementCapability {
     fun move()
 }
 
-class FlyingCapabibility(val x: Int) : MovementCapability {
+class FlyingCapability(val x: Int) : MovementCapability {
     override fun move() {
         print("Flying $x")
     }
@@ -13,7 +13,7 @@ class FlyingCapabibility(val x: Int) : MovementCapability {
 class Vehicle(movementCapability: MovementCapability) : MovementCapability by movementCapability
 
 fun doStuff() {
-    val capability = FlyingCapabibility(10)
+    val capability = FlyingCapability(10)
     Vehicle(capability).move()
 }
 

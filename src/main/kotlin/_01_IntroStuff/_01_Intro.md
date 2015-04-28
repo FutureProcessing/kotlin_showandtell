@@ -1,13 +1,30 @@
-Introduction
-Kotlin is a language by JetBrains, the company behind IntelliJ IDEA and other (sweet) tools, and is purpose built for large-scale software projects to improve upon Java with a focus on readability, correctness, and developer productivity.
-The language was created in response to limitations in Java which were hindering development of JetBrains' software products and after an evaluation of all other JVM languages proved unsuitable. Since the goal of Kotlin was for use in improving their products, it focuses very strongly on interop with Java code and the Java standard library.
+## Skąd się wziął?
 
-Interoperability
-The most important feature of the Kotlin language and runtime is its core focus on interoperability. Unlike other JVM alternative languages (most specifically: Scala), idiomatic Kotlin should be able to easily call Java as well as have idiomatic Java easily call into Kotlin. In fact, you should never know that you are crossing that boundary in either direction.
-The runtime of Kotlin exists only to support the language features making it extremely lean. The java standard library types, collections, etc. are all reused and ultimately are augmented for greater utility through some of the subsequently mentioned features.
+* Firma JetBrains stworzyła Kotlina, aby budować projekty dużej skali. Główne skupienie jest na czytelności, 
+wsparciu sprawdzania poprawności i wsparciu produktywności.
+* Kompilator produkuje bytecode na JVM lub kod JavaScript
+* Język stworzony jako odpowiedź na ograniczenia Javy i pozostałych języków targetujących JVM - JetBrains nie znalazło wśród nich języka
+który by im odpowiadał
+* W roku 2011 pojawiły się pierwsze wzmianki - jest to język bardzo świeży
 
-In Kotlin, everything is an object in the sense that we can call member functions and properties on any variable. Some types are built-in, because their implementation is optimized, but to the user they look like ordinary classes. In this section we describe most of these types: numbers, characters, booleans and arrays.
+## Założenia
 
-== to equals a nie identity, jest identityEquals i ===
+* Statyczny i silnie typowany, z mocnym 'type inference'
+* Praktycznie idealna i 100% kompatybilność z Javą i standardową biblioteką Javy
+* Dwustronna łatwość wywoływania Javy z Kotlina i vice-versa
+* Masz nawet nie zauważyć, że przekroczyłeś granicę
+* Prostota i czytelność przede wszystkim - język jest prosty
+* Wybranie dobrych i prostych elementów z innych języków
+* Nic nadzwyczajnego i rewolucyjnego - po prostu skuteczne i proste narzędzie
+* Bardzo mały i lekki narzut runtime (libki, jarki, dodatkowe klasy). Rozbudowanie istniejących klas standardowych Javy
 
-pakiet nie musi sie zgadzac z katalogiem, jak w c#
+## Ciekawostki
+
+* Przeładowywanie operatorów
+* Nie jest zbudowany nad Javą - Java to dla Kotlina 'platform specific'
+* Wszystko jest obiektem (ale nie java.lang.Object!)
+* Obsługa typów specjalnych i mocne optymalizacje performance i pamięciowe (stos/sterta) - ale dla programisty są używane jak obiekty
+* == to equals. Jest === czyli .identityEquals
+* nie trzeba używać ;
+* pakiet nie musi sie zgadzać z katalogiem (coś jak namespace z C#)
+
